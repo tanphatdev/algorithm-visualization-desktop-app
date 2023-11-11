@@ -1,0 +1,63 @@
+﻿<Window x:Class="KnapsackProblem.GreedySubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KnapsackProblem"
+        mc:Ignorable="d"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="GreedySubWindow" SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Arial">
+    <Window.Resources>
+        <Style x:Key="TitleBorderStyle" TargetType="Border">
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="#93CDFF"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+        <Style x:Key="NormalBorderStyle" TargetType="Border">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="#DBF1FF"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+        <Style x:Key="TitleTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key="NormalTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="FontWeight" Value="Light"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <!-- Setup Layout Tổng -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" MinWidth="300" MinHeight="200" Margin="50 30 50 30">
+            <Grid Name="mainGrid" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Rectangle VerticalAlignment="Top" Margin="10 0 10 0" Height="2" Fill="#555"/>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button Name="btnStartAndPause" Click="StartPauseButton_Click"  Margin="0 0 5 0" Height="30" Width="90" Background="#dee1e6" Foreground="#000" BorderBrush="Transparent" FontSize="12">Bắt Đầu</Button>
+                <Button Name="btnReset" Click="ResetButton_Click" Margin="0 0 5 0" Height="30" Width="90" Background="#dee1e6" Foreground="#000" BorderBrush="Transparent" FontSize="12">Làm Mới</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
